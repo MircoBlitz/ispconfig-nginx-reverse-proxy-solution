@@ -103,7 +103,6 @@ In **ISPconfig Admin → System → Server Config → Web**, set:
 |---------|-------|
 | Enable PROXY Protocol | ✅ on |
 | Use PROXY Protocol (IPv4 + IPv6) | ✅ on |
-| Use PROXY Protocol (IPv6) | ✅ on |
 | PROXY Protocol HTTP Port | `9080` |
 | PROXY Protocol HTTPS Port | `9443` |
 
