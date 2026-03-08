@@ -268,22 +268,8 @@ The setup script creates backups of `/etc/apache2/` and `/etc/letsencrypt/` befo
 
 ISPconfig also supports AlmaLinux 8/9 and Rocky Linux 8/9. These systems use a different Apache layout that would require the following changes to `setup.sh` and `nginx-vhost-gen.sh`:
 
-| Aspect | Debian/Ubuntu (current) | AlmaLinux/Rocky (future) |
-|--------|------------------------|--------------------------|
-| Package manager | `apt-get` | `dnf` |
-| Brotli packages | `libnginx-mod-http-brotli-*` | `nginx-mod-http-brotli` (EPEL) |
-| Apache service | `apache2` | `httpd` |
-| Apache config test | `apache2ctl configtest` | `apachectl configtest` |
-| Apache conf dir | `/etc/apache2/` | `/etc/httpd/` |
-| Enable conf | `a2enconf` | drop file in `/etc/httpd/conf.d/` |
-| ISPconfig vhost dir | `/etc/apache2/sites-enabled/` | TBD — needs verification on RHEL install |
-
-The core logic (nginx config generation, MD5-based sync, Safari fix, certbot integration) is identical on both platforms and would not need changes.
-
-**Open question:** The exact vhost directory ISPconfig uses on RHEL-based systems needs to be verified on a live installation before implementation.
-
 ---
 
 ## License
 
-MIT
+Apache 2
